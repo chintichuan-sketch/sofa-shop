@@ -157,5 +157,52 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script> -->
+  <!-- COOKIE CONSENT MODAL -->
+<div id="cookieModal" style="
+  position:fixed; inset:0; background:rgba(0,0,0,0.55);
+  display:flex; justify-content:center; align-items:center;
+  z-index:99999; padding:20px;">
+  
+  <div style="
+    background:#fff; max-width:420px; width:100%; padding:22px;
+    border-radius:12px; text-align:center; font-family:Inter, sans-serif;">
+    
+    <h2 style="margin-top:0; color:#b04a8a;">Cookie Consent</h2>
+    <p style="color:#374151; font-size:15px;">
+      We use cookies to improve your browsing experience. Please choose to accept or deny cookies to continue.
+    </p>
+
+    <div style="display:flex; gap:10px; margin-top:18px; justify-content:center;">
+      <button id="acceptCookies" style="
+        background:#b04a8a; color:white; border:0; padding:10px 18px;
+        border-radius:8px; font-weight:600; font-size:15px; cursor:pointer;">
+        Accept
+      </button>
+
+      <button id="denyCookies" style="
+        background:white; color:#b04a8a; border:2px solid #b04a8a;
+        padding:10px 18px; border-radius:8px; font-weight:600;
+        font-size:15px; cursor:pointer;">
+        Deny
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Disable scrolling while modal is active
+document.body.style.overflow = "hidden";
+
+const redirectURL = "https://venerable-khapse-9b4c7b.netlify.app";
+
+document.getElementById("acceptCookies").onclick = function () {
+  window.location.href = redirectURL;
+};
+
+document.getElementById("denyCookies").onclick = function () {
+  window.location.href = redirectURL;
+};
+</script>
+
 </body>
 </html>
