@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premium Sofas — Trusted Furniture Store</title>
+  <meta name="description" content="Shop premium sofas with clear pricing, secure checkout, free delivery options and 30-day returns. Contact our support at +1-555-0123." />
+  <!-- Required for Google crawlers: sitemap & canonical -->
+  <link rel="canonical" href="https://www.example.com/sofas" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Structured data (helps transparency) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Premium Sofa Store",
+    "url": "https://www.example.com",
+    "logo": "https://www.example.com/logo.png",
+    "telephone": "+1-555-0123",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Furniture Lane",
+      "addressLocality": "Cityville",
+      "addressRegion": "CA",
+      "postalCode": "90001",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/yourbusiness",
+      "https://www.instagram.com/yourbusiness"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Clean, accessible styles */
+    :root{--accent:#ff6a00;--dark:#111}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:#f7f7f7;color:#111}
+    header{background:var(--dark);color:#fff;padding:18px 16px}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .hero{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;padding:40px;background-image:url('https://via.placeholder.com/1600x600?text=Premium+Sofas');background-size:cover;background-position:center;color:#fff}
+    h1{margin:0;font-weight:700}
+    .cta{display:inline-block;padding:12px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
+    .card{background:#fff;border-radius:10px;padding:16px;box-shadow:0 6px 18px rgba(17,17,17,0.06)}
+    .card img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+    footer{background:#0d0d0d;color:#ddd;padding:24px;margin-top:32px}
+    .muted{color:#666;font-size:0.95rem}
+    a{color:var(--accent)}
+    /* Accessibility: focus styles */
+    a:focus{outline:3px solid #ffd7b8}
+    /* Mobile spacing */
+    @media(min-width:800px){.hero{height:52vh}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
+      <div>
+        <strong>Premium Sofa Store</strong>
+      </div>
+      <div style="text-align:right">
+        <div class="muted">Call us: <a href="tel:+15550123">+1‑555‑0123</a></div>
+        <div class="muted">Support: <a href="mailto:support@example.com">support@example.com</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-label="Sofa hero">
+      <div class="container" style="text-align:center">
+        <h1>Comfort &amp; Craftsmanship — Sofas You’ll Love</h1>
+        <p class="muted">Clear prices, secure checkout, 30‑day returns, free local delivery over $499.</p>
+        <a class="cta" href="#products">Browse Sofas</a>
+      </div>
+    </section>
+
+    <section class="container" id="products" aria-label="Products">
+      <h2>Featured Sofas</h2>
+      <div class="products" role="list">
+
+        <article class="card" role="listitem" aria-labelledby="p1">
+          <img src="https://via.placeholder.com/640x360?text=Modern+Velvet+Sofa" alt="Modern Velvet Sofa — 3-seater" />
+          <h3 id="p1">Modern Velvet Sofa — 3‑Seater</h3>
+          <p class="muted">Starting at <strong>$799</strong>. Available in 5 colors. Estimated delivery: 7–12 business days.</p>
+          <p><a href="/product/modern-velvet" aria-label="View Modern Velvet Sofa details">View details</a></p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="p2">
+          <img src="https://via.placeholder.com/640x360?text=Luxury+Leather+Sofa" alt="Luxury Leather Sofa — 2-seater" />
+          <h3 id="p2">Luxury Leather Sofa — 2‑Seater</h3>
+          <p class="muted">Starting at <strong>$1,199</strong>. Genuine leather. 30‑day return policy.</p>
+          <p><a href="/product/luxury-leather" aria-label="View Luxury Leather Sofa details">View details</a></p>
+        </article>
+
+        <article class="card" role="listitem" aria-labelledby="p3">
+          <img src="https://via.placeholder.com/640x360?text=L-Shaped+Family+Sofa" alt="L-Shaped Family Sofa" />
+          <h3 id="p3">Classic L‑Shaped Family Sofa</h3>
+          <p class="muted">Starting at <strong>$1,399</strong>. Seats 5. Free assembly available in select areas.</p>
+          <p><a href="/product/l-shaped" aria-label="View L-Shaped Sofa details">View details</a></p>
+        </article>
+
+      </div>
+
+      <!-- Simple lead form that does not auto-redirect, collects minimal info -->
+      <section style="margin-top:28px;background:#fff;padding:18px;border-radius:10px">
+        <h3>Get a quick quote</h3>
+        <form action="/lead" method="post" onsubmit="return validateForm()" aria-label="Quick quote form">
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <input name="name" placeholder="Full name" required style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px" />
+            <input name="email" type="email" placeholder="Email" required style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px" />
+            <input name="phone" type="tel" placeholder="Phone" required style="flex:1;padding:10px;border:1px solid #ddd;border-radius:6px" />
+          </div>
+          <div style="margin-top:12px"><button type="submit" class="cta">Request Quote</button></div>
+        </form>
+        <p class="muted" style="margin-top:8px">We only use your details to reply about your request. See our <a href="/privacy">Privacy Policy</a>.</p>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>Premium Sofa Store</strong>
+          <div class="muted">123 Furniture Lane, Cityville, CA 90001</div>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/privacy">Privacy Policy</a> • <a href="/returns">Returns &amp; Shipping</a> • <a href="/terms">Terms</a>
+        </nav>
+      </div>
+
+      <div class="muted">Prices shown include standard taxes where applicable. Secure checkout — HTTPS required on live site.</div>
+      <div class="muted">© 2025 Premium Sofa Store</div>
+    </div>
+  </footer>
+
+  <!-- Minimal client-side validations and crawl-friendly content -->
+  <script>
+    function validateForm(){
+      // don't auto-redirect; keep form simple and accessible
+      var form=document.querySelector('form');
+      var ok=form.checkValidity();
+      if(!ok){alert('Please fill all required fields');return false}
+      return true;
+    }
+  </script>
+
+  <!-- Placeholder: add Google Tag Manager / gtag on live site (ensure you use final ID) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+</body>
+</html>
